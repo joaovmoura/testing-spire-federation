@@ -1,5 +1,2 @@
-# Arquivos binários
-*.exe
-*.dll
-*.so
-*.dylib
+main*
+!main.*

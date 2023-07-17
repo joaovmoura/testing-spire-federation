@@ -15,7 +15,7 @@ import (
 
 func sendRequest(ctx context.Context, client helloworld.GreeterClient) {
 	peer := new(peer.Peer)
-	res, err := client.SayHello(ctx, &helloworld.HelloRequest{}, grpc.Peer(peer))
+	res, err := client.SayHello(ctx, &helloworld.HelloRequest{Name: "Joao Vitor"}, grpc.Peer(peer))
 	if err != nil {
 		log.Printf("Failed to send hello request. Error: %v\n", err)
 		return
