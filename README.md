@@ -17,4 +17,5 @@ Testando o Spire federation para fornecer SVID's para a comunicação entre um s
 3- Rodar o script "setup.sh"
 
  `chmod +x setup.sh`
+ 
  `./setup.sh`
