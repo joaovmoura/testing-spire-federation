@@ -8,7 +8,7 @@ Testando o Spire federation para fornecer SVID's para a comunicação entre um s
 
 1- Clonar o repositório
 
- `git clone git@github.com:joaovmoura/testing-spire-federation.git`
+ `git clone https://github.com/joaovmoura/testing-spire-federation.git`
 
 2- Entrar no diretório
 
