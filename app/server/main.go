@@ -1,20 +1,22 @@
 package main
+
 import (
-	"google.golang.org/grpc/credentials/insecure"
 	"context"
 	"flag"
 	"fmt"
-	"google.golang.org/grpc"
-	"google.golang.org/grpc/examples/helloworld/helloworld"
 	"log"
 	"net"
+
+	"google.golang.org/grpc"
+	"google.golang.org/grpc/credentials/insecure"
+	"google.golang.org/grpc/examples/helloworld/helloworld"
 )
 
-type greeter struct{
+type greeter struct {
 	helloworld.UnimplementedGreeterServer
 }
 
-func (greeter) SayHello(ctx context.Context, req *helloworld.HelloRequest) (*helloworld.HelloReply, error,) {
+func (greeter) SayHello(ctx context.Context, req *helloworld.HelloRequest) (*helloworld.HelloReply, error) {
 	clientId := "UnknownClientId" // Não é possível saber o id do cliente ainda. Isso vai mudar com o uso do spire.
 
 	log.Printf("%s has requested that I say hello world to %q...", clientId, req.Name)
@@ -24,7 +26,7 @@ func (greeter) SayHello(ctx context.Context, req *helloworld.HelloRequest) (*hel
 	}, nil
 }
 
-func main(){
+func main() {
 	var addr string
 	flag.StringVar(&addr, "addr", "localhost:8123", "host:port of the server")
 	log.Printf("Server (%s) starting up...", addr)
@@ -44,5 +46,3 @@ func main(){
 		log.Fatal(err)
 	}
 }
-
-
