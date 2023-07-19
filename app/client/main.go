@@ -53,7 +53,7 @@ func main() {
 	greeterClient := helloworld.NewGreeterClient(client)
 
 	const interval = time.Second * 10
-	log.Printf("We will be sending reuqests every %s s...\n", interval)
+	log.Printf("We will be sending reuqests every %s...\n", interval)
 	// TODO: Implementar "send request"
 	for {
 		sendRequest(ctx, greeterClient)
