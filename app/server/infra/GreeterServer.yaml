@@ -20,7 +20,7 @@ spec:
       - name: greeter-server
         image: localhost:32000/greeter-server
         imagePullPolicy: Always
-        args: ["--addr0, ":8123"]
+        args: ["--addr0", ":8123"] 
 # TODO: montar volumes
 # TODO: spiff endpoint env
 ---
@@ -38,3 +38,4 @@ spec:
     port: 8123
     targetPort: 8123
     protocol: TCP
+
