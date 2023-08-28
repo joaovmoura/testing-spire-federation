@@ -12,7 +12,7 @@ if [ $? -ne 0 ]; then
     echo "Ops"
     exit 1
 fi
-
+docker tag greeter-server:demo localhost:32000/greeter-server:demo
 docker push localhost:32000/greeter-server:demo
 
 if [ $? -ne 0 ]; then
