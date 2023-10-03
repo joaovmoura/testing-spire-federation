@@ -18,22 +18,11 @@ spec:
     spec:
       containers:
       - name: greeter-server
-        image: registry-service:32000/greeter-server:demo
+        image: vitinhocalvo/greeter-server:latest
         imagePullPolicy: Always
         args: ["--addr", ":8123"] 
 # TODO: montar volumes
 # TODO: spiff endpoint env
----
-apiVersion: v1
-kind: Service
-metadata:
-  name: registry-service
-spec:
-  selector:
-    app: registry  # Use os rótulos do seu pod de registro
-  ports:
-    - protocol: TCP
-      port: 32000     # A porta em que o registro está exposto no pod
 ---
 apiVersion: v1
 kind: Service
