@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: greeter-client
+  namespace: default
+  labels:
+    app: greeter-client
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: greeter-client
+  template:
+    metadata:
+      namespace: default
+      labels:
+        app: greeter-client
+    spec:
+      containers:
+      - name: greeter-client
+        image: vitinhocalvo/greeter-client
+        imagePullPolicy: Always
+        args: ["--addr", "10.244.0.5:8123"]
+        # TODO: Volume mount
+        # TODO: env

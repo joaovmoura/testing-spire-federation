@@ -6,14 +6,14 @@ if [ $? -ne 0 ]; then
     exit 1
 fi
 
-docker build . -t localhost:32000/greeter-server:demo
+docker build . -t vitinhocalvo/greeter-server
 
 if [ $? -ne 0 ]; then
     echo "Ops"
     exit 1
 fi
-docker tag greeter-server:demo localhost:32000/greeter-server:demo
-docker push localhost:32000/greeter-server:demo
+
+docker push vitinhocalvo/greeter-server
 
 if [ $? -ne 0 ]; then
     echo "Ops"

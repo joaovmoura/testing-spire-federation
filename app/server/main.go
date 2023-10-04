@@ -29,6 +29,8 @@ func (greeter) SayHello(ctx context.Context, req *helloworld.HelloRequest) (*hel
 func main() {
 	var addr string
 	flag.StringVar(&addr, "addr", "localhost:8123", "host:port of the server")
+	// flag.Parse()
+
 	log.Printf("Server (%s) starting up...", addr)
 
 	listener, err := net.Listen("tcp", addr)
