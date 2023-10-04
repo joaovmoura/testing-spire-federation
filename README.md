@@ -23,6 +23,6 @@ Algumas informações úteis podem ser encontradas aqui:
 
 3- Rodar o script "setup.sh"
 
- `chmod +x setup.sh`
- 
- `./setup.sh`
+OBS.: A ideia inicial da configuração demandava a criação de um registry local para subir as imgens do server e do client.
+No entanto tive problemas para configurar localmente o registry para ser acessado na criação dos PODS. Portanto, por hora não seria bom usar os
+scripts de setup.
